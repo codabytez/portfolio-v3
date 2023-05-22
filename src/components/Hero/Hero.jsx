@@ -8,9 +8,7 @@ const Hero = () => {
         <h1 className="ml-12 font-extrabold text-4xl leading-[calc(70px)]">
           <span className="block pb-1">Hi</span>
           <span className="block pb-1">My name is</span>
-          <span className="block animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent text-5xl font-black pb-1">
-            Obinna Chidi
-          </span>
+          <span className="name text-5xl">Obinna Chidi</span>
           <span className="block">I build things for the web</span>
         </h1>
       </div>

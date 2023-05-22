@@ -1,12 +1,9 @@
 import React from "react";
-import myProject from "../myProject";
 import { FaLink, FaGithub } from "react-icons/fa";
-
-// console.log(myProject);
 
 const Live = (props) => {
   return (
-    <div className=" rounded-t-3xl overflow-hidden drop-shadow-2xl shadow-md shadow-gray-400">
+    <div className=" rounded-t-3xl overflow-hidden shadow drop-shadow-xl hover:shadow-md hover:shadow-gray-400 transition ease-in-out duration-300">
       <img className="w-full h-64" src={props.src} alt={props.alt} />
       <div className="px-7 py-4">
         <h3 className=" text-2xl font-bold capitalize">{props.title}</h3>
