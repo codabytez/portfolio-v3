@@ -1,14 +1,11 @@
 import React from "react";
-import Links from "../Navbar/Links";
 
 const LowerFooter = () => {
   return (
-    <div className="flex justify-between items-center mt-5 my-3 mx-3 mb-5 px-8">
-      <div className="flex w-[calc(50%)]">
-        <Links />
-      </div>
+    <div className="flex flex-col md:flex-row justify-between items-center mt-5 my-3 mb-5">
+
       <div>
-        <h3 className="flex items-center">
+        <h3 className="flex items-center mt-4">
           <span className="flex items-center">
             Built with ❤️ by
             <a
@@ -20,7 +17,14 @@ const LowerFooter = () => {
           </span>
         </h3>
       </div>
+      <div className="flex">
+        <div className="flex justify-center text-gray-400 italic font-extrabold">
+          <p>Copyright © {new Date().getFullYear()} </p>
+        </div>
+      </div>
     </div>
+
+
   );
 };
 

@@ -1,34 +1,32 @@
 import React from "react";
-import myProject from "../myProject";
+import myProject from "./myProject";
 import Live from "./Live";
 
-function prj(card) {
-  return (
-    <Live
-      key={card.key}
-      src={card.src}
-      alt={card.alt}
-      title={card.title}
-      description={card.description}
-      stack={card.stack}
-      preview={card.preview}
-      github={card.github}
-    />
-  );
-}
 
 const Project = () => {
   return (
-    <div className="w-[calc(90%)] m-auto">
+    <div className="max-w-[1040px] m-auto md:pl-20 p-4 py-16 pb-40">
       <div>
-        <h1 className="flex justify-center font-extrabold text-4xl py-5 pt-10">
+        <h1 className="text-4xl font-bold text-center text-blue-500">
           Projects
         </h1>
-        <h3 className="flex justify-center py-3 font-semibold text-2xl pb-10">
+        <p className="text-center py-8">
           Things I’ve built so far
-        </h3>
+        </p>
       </div>
-      <div className=" grid grid-cols-3 gap-10 ">{myProject.map(prj)}</div>
+      <div className="grid sm:grid-cols-2 gap-12">{myProject.map(card => (
+        <Live
+          key={card.key}
+          src={card.src}
+          alt={card.alt}
+          title={card.title}
+          description={card.description}
+          stack={card.stack}
+          preview={card.preview}
+          github={card.github}
+        />
+      ))}
+      </div>
     </div>
   );
 };

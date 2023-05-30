@@ -1,4 +1,4 @@
-import image from "../assets/godshepherdly.jpg";
+import image from "../../assets/godshepherdly.jpg";
 
 const myProject = [
   {

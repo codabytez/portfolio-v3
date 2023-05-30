@@ -2,7 +2,7 @@
 
 Welcome to my portfolio! This repository showcases my projects and skills. Feel free to explore and get to know more about me.
 
-## Projects
+<!-- ## Projects
 
 ### Project 1: Project Name
 Description: Provide a brief description of the project, highlighting its purpose and key features.
@@ -38,5 +38,5 @@ Mention the license under which your portfolio is released. For example, you can
 
 ## Acknowledgments
 
-If you would like to give credit to anyone, such as mentors or collaborators, you can include an acknowledgments section.
+If you would like to give credit to anyone, such as mentors or collaborators, you can include an acknowledgments section. -->
 

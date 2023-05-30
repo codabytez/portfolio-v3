@@ -1,19 +1,14 @@
 import React from "react";
-import TopFooter from "./topFooter";
 import LowerFooter from "./LowerFooter";
+import Social from "./Social";
 
-var date = new Date();
-var year = date.getFullYear();
 
 const Footer = () => {
   return (
-    <div className="w-[calc(90%)] m-auto mt-40">
-      <TopFooter />
+    <div className="max-w-[1040px] m-auto md:pl-20 p-4 pb-1 pt-16">
       <hr className="bg-gray-300 h-1 my-5" />
       <LowerFooter />
-      <div className="flex justify-center text-gray-400 italic font-extrabold">
-        <p>Copyright © {year} </p>
-      </div>
+      <Social />
     </div>
   );
 };
