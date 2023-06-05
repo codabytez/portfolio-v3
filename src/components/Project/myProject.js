@@ -9,8 +9,8 @@ const myProject = [
     description:
       "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
     stack: "HTML5, CSS3, JavaScript",
-    preview: "https://www.google.com",
-    github: "https://www.github.com",
+    preview: "/",
+    github: "https://www.github.com/",
   },
   {
     key: 2,
@@ -20,8 +20,8 @@ const myProject = [
     description:
       "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
     stack: "HTML5, CSS3, JavaScript",
-    preview: "https://www.google.com",
-    github: "https://www.github.com",
+    preview: "/",
+    github: "https://www.github.com/",
   },
   {
     key: 3,
@@ -31,8 +31,8 @@ const myProject = [
     description:
       "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
     stack: "HTML5, CSS3, JavaScript",
-    preview: "https://www.google.com",
-    github: "https://www.github.com",
+    preview: "/",
+    github: "https://www.github.com/",
   },
   {
     key: 4,
@@ -42,8 +42,8 @@ const myProject = [
     description:
       "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
     stack: "HTML5, CSS3, JavaScript",
-    preview: "https://www.google.com",
-    github: "https://www.github.com",
+    preview: "/",
+    github: "https://www.github.com/",
   },
   {
     key: 5,
@@ -53,8 +53,8 @@ const myProject = [
     description:
       "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
     stack: "HTML5, CSS3, JavaScript",
-    preview: "https://www.google.com",
-    github: "https://www.github.com",
+    preview: "/",
+    github: "https://www.github.com/",
   },
   {
     key: 6,
@@ -64,8 +64,8 @@ const myProject = [
     description:
       "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
     stack: "HTML5, CSS3, JavaScript",
-    preview: "https://www.google.com",
-    github: "https://www.github.com",
+    preview: "/",
+    github: "https://www.github.com/",
   },
 ];
 

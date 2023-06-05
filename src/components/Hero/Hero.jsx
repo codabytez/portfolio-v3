@@ -1,32 +1,32 @@
 import React from "react";
-import HeroImage from "../../assets/godshepherdly.jpg";
+import HeroImage from "../../assets/MacMemoji.svg";
 import { TypeAnimation } from 'react-type-animation';
 
 
 const Hero = () => {
   return (
-    <div id="main" className="max-w-[1040px] max-h-[1000px] m-auto pr-10 md:pl-20 p-4 py-6">
-      <div className="m-auto h-screen w-full flex flex-col md:flex-row justify-center">
+    <div id="main" className="max-w-[1400px] min-w-[300px] m-auto pr-10 md:px-20 p-4 py-6 bg-light dark:bg-dark ">
+      <div className="m-auto h-[calc(100vh-70px)] md:h-screen w-full flex flex-col md:flex-row justify-center">
 
         <div className="basis-2/3 flex w-full h-full justify-center items-center md:order-2">
-          <div className="w-[300px] h-[300px] flex justify-center items-center rounded-full overflow-hidden bg-gradient-to-t from-sky-500 to-pink-600">
+          <div className="w-[100%] h-[100%] flex justify-center items-center rounded-full overflow-hidden">
             <img
               src={HeroImage}
               alt="Obinna Chidi"
-              className="rounded-full w-[290px] h-[290px]"
+              className="rounded-full w-60 h-60 sm:w-1/2 md:w-full lg:w-[90%] sm:h-auto bg-gradient-to-r from-gradient-100 to-gradient-200 p-2"
             />
           </div>
         </div>
 
 
-        <div className="w-full m-auto flex flex-col items-center md:items-start justify-center">
-          <h1 className="sm:text-5xl text-4xl font-bold text-gray-800">
+        <div className="md:w-full m-auto flex flex-col items-start md:items-start justify-center">
+          <h1 className="sm:text-5xl text-4xl font-bold text-solid dark:text-darkSolid">
             I'm <span className="name block leading-relaxed">Obinna Chidi</span>
           </h1>
           {/* <h2 className="sm:text-4xl text-3xl font-medium text-gray-800">
               I'm a
             </h2> */}
-          <span className="sm:text-4xl text-3xl font-bold name">
+          <span className="sm:text-4xl text-[26px] font-bold name">
             <TypeAnimation
               sequence={[
                 ' Web Developer.',
@@ -47,7 +47,7 @@ const Hero = () => {
                 display: 'inline'
               }}
             />
-            <hr className="w-full h-2 mt-px animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 font-black" />
+            <p className="w-full h-1.5 mt-px animate-text bg-gradient-to-r from-gradient-100 to-gradient-200 font-black" />
           </span>
         </div>
 

@@ -1,10 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import { AiOutlineHome, AiOutlineMail, AiOutlineMenu, AiOutlineProject } from "react-icons/ai";
-import { GrProjects } from "react-icons/gr";
-import { BsPerson } from "react-icons/bs";
-import Social from "./Social";
-
+import { AiOutlineHome, AiOutlineLaptop, AiOutlineMail, AiOutlineProject, AiOutlineUserAdd } from "react-icons/ai";
+import Links from "./Links";
+import NavImg from "../../assets/MemojiBoyPray.svg"
 
 const Navbar = () => {
 
@@ -12,111 +10,86 @@ const Navbar = () => {
   const click = () => {
     setIsOpen(!isOpen);
   }
-  // const navStyle = "h-20 bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600";
-
 
   return (
-    <div onClick={click}>
-      {/* <AiOutlineMenu className="fixed top-4 right-4 z-30 md:hidden cursor-pointer" onClick={click} /> */}
-
-
-      <div>
-
-        <button data-collapse-toggle="navbar-sticky" type="button" className="fixed top-4 right-4 z-30 inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-200 " aria-controls="navbar-sticky" aria-expanded="false" onClick={click}>
-          {!isOpen ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6 active:transform active:rotate-180 transition-all duration-700 ease-in-out"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6 active:transform active:-rotate-180 transition-all duration-700 ease-in-out"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-          )}
-        </button>
+    <div className="w-full h-14 fixed md:h-0 top-0 left-0 z-10 bg-darkSolid dark:bg-solid">
+      <div className="max-w-[1400px] m-auto">
+        <img src={NavImg} className="h-10 w-10 md:h-16 md:w-16 rounded-full m-2 border-2 border-darkSolid dark:border-solid" />
       </div>
 
+
+      <button data-collapse-toggle="navbar-sticky" type="button" className="fixed top-2 right-4 z-30 inline-flex items-center p-2 text-sm rounded-lg md:hidden hover:bg-darkContent hover:text-content text-darkContent dark:text-darkSolid dark:hover:text-solid" aria-controls="navbar-sticky" aria-expanded="false" onClick={click}>
+        {!isOpen ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-6 h-6 active:transform active:rotate-180 transition-all duration-200 ease-in-out"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-6 h-6 active:transform active:-rotate-180 transition-all duration-200 ease-in-out"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fillRule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clipRule="evenodd"
+            />
+          </svg>
+        )}
+      </button>
+
       {isOpen && (
-        <div className="fixed w-full h-full bg-white/90 flex flex-col justify-center items-center z-20 transition ease-in duration-1000 md:hidden">
+        <div onClick={click} className="fixed w-full h-full bg-light/90 dark:bg-dark/90 flex flex-col justify-center items-center z-10 transition ease-in duration-500 md:hidden text-content dark:text-darkContent">
           <a onClick={click}
             href="#main"
-            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-200 shadow-gray-300 hover:shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 transition ease-in duration-200">
+            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-darkSolid shadow-darkContent m-2 p-4 cursor-pointer hover:scale-110 transition ease-in duration-200 dark:bg-solid dark:shadow-content dark:shadow-md">
             <AiOutlineHome size={20} />
             <span className="pl-4">Home</span>
           </a>
 
           <a onClick={click}
-            href="#main"
-            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-200 shadow-gray-300 hover:shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200">
-            <GrProjects size={20} />
-            <span className="pl-4">Work</span>
+            href="#about"
+            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-darkSolid shadow-darkContent m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 dark:bg-solid dark:shadow-content dark:shadow-md">
+            <AiOutlineUserAdd size={20} />
+            <span className="pl-4">About</span>
           </a>
 
           <a onClick={click}
-            href="#main"
-            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-200 shadow-gray-300 hover:shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200">
+            href="#tech"
+            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-darkSolid shadow-darkContent m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 dark:bg-solid dark:shadow-content dark:shadow-md">
+            <AiOutlineLaptop size={20} />
+            <span className="pl-4">Tech Stack</span>
+          </a>
+
+          <a onClick={click}
+            href="#project"
+            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-darkSolid shadow-darkContent m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 dark:bg-solid dark:shadow-content dark:shadow-md">
             <AiOutlineProject size={20} />
             <span className="pl-4">Projects</span>
           </a>
 
           <a onClick={click}
-            href="#main"
-            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-200 shadow-gray-300 hover:shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200">
-            <BsPerson size={20} />
-            <span className="pl-4">Resume</span>
-          </a>
-
-          <a onClick={click}
             href="#contact"
-            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-200 shadow-gray-300 hover:shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200">
+            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-darkSolid shadow-darkContent m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200 dark:bg-solid dark:shadow-content dark:shadow-md">
             <AiOutlineMail size={20} />
             <span className="pl-4">Contact</span>
           </a>
 
         </div>
       )}
-
-
-      <div className="md:block hidden fixed top-[25%] z-10 ">
-        <div className="flex flex-col">
-          <a href="#main" className="rounded-full shadow-lg bg-gray-100 m-3 p-4 cursor-pointer hover:scale-150 ease-in duration-300 shadow-gray-600">
-            <AiOutlineHome size={20} />
-          </a>
-
-          <a href="#main" className="rounded-full shadow-lg bg-gray-100 m-3 p-4 cursor-pointer hover:scale-150 ease-in duration-300 shadow-gray-600">
-            <GrProjects size={20} />
-          </a>
-          <a href="#main" className="rounded-full shadow-lg bg-gray-100 m-3 p-4 cursor-pointer hover:scale-150 ease-in duration-300 shadow-gray-600">
-            <AiOutlineProject size={20} />
-          </a>
-          <a href="#main" className="rounded-full shadow-lg bg-gray-100 m-3 p-4 cursor-pointer hover:scale-150 ease-in duration-300 shadow-gray-600">
-            <BsPerson size={20} />
-          </a>
-          <a href="#main" className="rounded-full shadow-lg bg-gray-100 m-3 p-4 cursor-pointer hover:scale-150 ease-in duration-300 shadow-gray-600">
-            <AiOutlineMail size={20} />
-          </a>
-
-        </div>
-      </div>
+      <Links />
 
     </div>
   );

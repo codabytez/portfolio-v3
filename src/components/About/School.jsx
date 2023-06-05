@@ -1,7 +1,7 @@
 import React from 'react'
-import { MdLocationCity, MdLocationPin } from 'react-icons/md';
+import { MdLocationCity, MdLocationPin, MdSchool } from 'react-icons/md';
 
-const Work = ({ year, title, duration, details, location, employmentType, company }) => {
+const School = ({ year, title, duration, details, location, school, schoolType }) => {
     return (
         <div className='lg:w-[900px]'>
             <ul className='flex flex-col md:flex-row relative border-l-4 border-content'>
@@ -19,8 +19,8 @@ const Work = ({ year, title, duration, details, location, employmentType, compan
                             </div>
                             <div className='flex flex-col sm:flex-row justify-between items-start sm:items-end text-sm sm:text-base pl-4 sm:p-0 min-w-[170px] text-content dark:text-darkContent'>
                                 <span className='flex items-center mt-2 '>
-                                    <MdLocationCity size={30} className='inline-block mr-1' />
-                                    {company}
+                                    <MdSchool size={30} className='inline-block mr-1' />
+                                    {school}
                                 </span>
                                 <span className='flex items-center'>
                                     <MdLocationPin size={30} className='inline-block mr-1' />
@@ -30,7 +30,7 @@ const Work = ({ year, title, duration, details, location, employmentType, compan
                         </div>
                         <div className='hidden sm:flex flex-col justify-center py-2 items-start sm:items-end'>
                             <span className='inline-block px-2.5 py-1.5 text-xs font-semibold text-btnText bg-btnSuccess rounded-2xl'>
-                                {employmentType}
+                                {schoolType}
 
                             </span>
                             <span className='mt-3 text-xs font-normal leading-none text-content dark:text-darkContent'>
@@ -45,4 +45,4 @@ const Work = ({ year, title, duration, details, location, employmentType, compan
     )
 }
 
-export default Work;
+export default School;
